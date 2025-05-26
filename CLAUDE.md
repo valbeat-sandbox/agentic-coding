@@ -1,41 +1,36 @@
-# CLAUDE.md
+# CLAUDE.md - Guidelines for Agentic Coding
 
 ## Git Workflow
-
 - Commit in appropriate work units with descriptive messages
 - NEVER commit directly to the main branch - always use feature branches
 - Follow conventional commit format
-- Do not include "🤖 Generated with [Claude Code](https://claude.ai/code)" in PR comments and Commit messages
-- Co-Authored-By: Claude <noreply@anthropic.com>"
+- Do not include "🤖 Generated with [Claude Code]" or "Co-Authored-By: Claude" in commits
 
-## Documentation Maintenance
+## Code Style Guidelines
+- **Formatting**: 2 spaces indentation, 80-100 char line length
+- **Naming**: camelCase for variables/functions, PascalCase for classes
+- **Imports**: Group by type (standard library → third-party → local)
+- **Types**: Use TypeScript types/interfaces in JS/TS, type hints in Python
+- **Error Handling**: Use explicit try/catch blocks, handle errors properly
+- **Comments**: Document complex logic only, prefer self-documenting code
+- **Functions**: Small, focused on single responsibility
+- **Principles**: Readability over cleverness, modularity, explicit over implicit
 
-- Update CLAUDE.md continuously without being asked
-- Add new rules and procedures when clarified
-- Accumulate project-specific knowledge and best practices
-- Record frequently used commands and shortcuts
-- Update when code conventions change or new tools are introduced
+## Language-Specific Guidelines
+- **JavaScript/TypeScript**: Modern ES6+, functional patterns where appropriate
+- **Python**: Follow PEP 8, use type hints, explicit docstrings
+- **Markdown**: Consistent heading hierarchy, code blocks with language specs
 
-## Build & Development Commands
+## Project Organization
+- Group files by feature/module rather than by file type
+- Place tests alongside implementation files or in parallel test directory
+- Key files: .clinerules, .github/copilot-instructions.md, .github/prompts/
+
+## Development Commands
 - Build: TBD (add command when build system is set up)
 - Dev server: TBD
 - Lint: TBD
 - Typecheck: TBD
 - Test: TBD
 - Single test: TBD (specify pattern for running a specific test)
-
-## Code Style Guidelines
-- **Formatting**: Use consistent indentation (2 spaces recommended)
-- **Naming**: Use descriptive names in camelCase for variables/functions, PascalCase for classes
-- **Imports**: Group imports by type (standard library first, then third-party, then local)
-- **Types**: Use strong typing where applicable
-- **Error Handling**: Use try/catch blocks and handle errors explicitly
-- **Comments**: Write clear comments for complex logic, avoid unnecessary comments
-- **Functions**: Keep functions small and focused on a single task
-- **Line Length**: Aim for 80-100 characters per line
-
-## Project Organization
-- Group files by feature/module rather than by file type
-- Place tests alongside implementation files or in parallel test directory
-
 
