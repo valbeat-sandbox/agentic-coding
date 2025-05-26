@@ -5,7 +5,6 @@
 - Commit in appropriate work units with descriptive messages
 - NEVER commit directly to the main branch - always use feature branches
 - Follow conventional commit format
-- Use `npx changeset` to document changes before creating PRs
 - Do not include "🤖 Generated with [Claude Code](https://claude.ai/code)" in PR comments and Commit messages
 - Co-Authored-By: Claude <noreply@anthropic.com>"
 
