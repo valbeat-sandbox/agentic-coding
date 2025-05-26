@@ -1,106 +1,84 @@
 ---
 applyTo: "**"
 ---
-# GitHub Copilot カスタムインストラクション
 
-## 👨‍💻 あなたについて
+# GitHub Copilot Instructions for Agentic Coding Sandbox
 
-PHPとTypeScriptを中心としたプロダクトエンジニアとして、技術記事の執筆支援やレビューを行っています。特に、ドメイン駆動設計やクリーンアーキテクチャなどのモダンなアーキテクチャパターンに関する実践的なコンテンツ作成を重視しています。
+## Project Context
 
-## 🛠️ プロジェクト概要
+This project is a sandbox for exploring and developing Agentic Coding techniques using Large Language Models (LLMs). The goal is to create a structured environment for testing prompts, rules, and workflows for AI-assisted coding.
 
-**プロジェクト名**: Zenn技術記事集
+## Coding Guidelines
 
-**概要**: PHP、TypeScript、Reactなどのモダン技術に関する技術記事を作成・管理するリポジトリです。技術記事は丁寧で読みやすい文体で書かれており、具体例を交えた解説を心がけています。
+When generating code for this project, please follow these guidelines:
 
-**コンセプト**: このプロジェクトでは、特に以下のテーマに焦点を当てています：
-- ドメイン駆動設計（DDD）の実践的なアプローチ
-- クリーンアーキテクチャの実装パターン
-- イベント駆動アーキテクチャの設計と応用
-- モダンPHPとTypeScriptの効果的な活用方法
+### General Principles
 
-各記事は問題提起→解決策→結果という論理的な流れで構成され、コード例には詳細なコメントと実践的なユースケースを含めています。
+- Prioritize readability and maintainability over clever or overly concise code
+- Include clear, descriptive comments explaining the purpose and functionality
+- Follow consistent naming conventions and code organization
+- Consider edge cases and error handling in your implementations
+- Aim for modular, reusable components when possible
 
-## 🔧 技術スタック
+### Language-Specific Guidelines
 
-- **バックエンド**: PHP 8.2+, Laravel
-- **フロントエンド**: TypeScript, React, Next.js
-- **設計手法**: DDD, クリーンアーキテクチャ, CQRS, イベントソーシング
-- **ツール**: Zenn CLI, Docker, GitHub Actions
+#### JavaScript/TypeScript
+- Use modern ES6+ syntax and features
+- Prefer functional programming patterns where appropriate
+- Use TypeScript types/interfaces for better code documentation
+- Follow standard linting rules (eslint:recommended)
 
-## 📋 支援してほしいこと
+#### Python
+- Follow PEP 8 style guidelines
+- Use type hints for function parameters and return values
+- Prefer explicit over implicit code
+- Use docstrings for functions and classes
 
-### 技術記事の執筆支援
+#### Markdown
+- Use consistent heading hierarchy
+- Include examples where helpful
+- Structure content with clear sections
+- Use code blocks with language specification
 
-以下のスタイルガイドに従った記事の作成を支援してください。記事構成の提案、見出しの設計、段落の組み立てなどを特に重視しています。
+## Project Structure
 
-[Writing Style](./prompts/writing-style.prompt.md)
+When suggesting new files or modifications, be aware of the project structure:
 
-主な支援内容:
-- 論理的な記事構成の組み立て
-- 技術概念の段階的な説明と比喩の提案
-- 読者の理解を促進する例示や図解の提案
-- 専門用語に対する適切な解説文の作成
+- `/examples`: Contains example implementations and use cases
+- `/experiments`: Stores results and analysis of different approaches
+- `/rules`: Houses guidelines and constraints for LLM behavior
+- `/templates`: Provides reusable code and documentation templates
+- `/workflows`: Defines step-by-step processes for common development activities
+- `/.github/prompts`: Contains effective prompts for various coding tasks
 
-### コードレビューと改善提案
+## Task-Specific Guidance
 
-以下のガイドラインに従って、コードと記事のレビュー支援をお願いします。建設的なフィードバックと具体的な改善案を重視しています。
+### Creating Prompts
+- Follow the structure outlined in `.github/prompts/generate-prompt.prompt.md`
+- Include clear purpose, target audience, and expected output format
+- Provide specific examples and constraints
+- Consider different skill levels and use cases
 
-[Review Style](./prompts/review-style.prompt.md)
+### Defining Rules
+- Make rules specific and actionable
+- Include rationale for each rule
+- Provide examples of following and violating the rule
+- Consider how rules interact with different coding contexts
 
-具体的な支援内容:
-- コードの品質と読みやすさの向上
-- アーキテクチャ設計の一貫性の確認
-- パフォーマンスやセキュリティに関する改善提案
-- 5軸評価システムを用いた客観的な評価
+### Designing Workflows
+- Break workflows into clear, sequential steps
+- Include decision points and alternative paths
+- Specify inputs and outputs for each step
+- Consider error handling and edge cases
 
-### サンプルコードの作成
+## Collaboration Focus
 
-以下のガイドラインに従って、実践的かつ教育的なサンプルコードの作成を支援してください。
+This project emphasizes effective collaboration between humans and AI. When generating suggestions:
 
-[Code Samples](./prompts/code-samples-common.prompt.md)
+- Explain your reasoning and approach
+- Offer alternatives when appropriate
+- Highlight potential trade-offs or considerations
+- Suggest improvements to existing code or documentation
+- Provide educational context that helps the user learn
 
-サポートして欲しい具体例:
-- DDDの実装例（Value ObjectやEntityの適切な設計）
-- イベント駆動型システムのコード例
-- Reactでのカスタムフックや効率的なコンポーネント設計
-- ユニットテストとモックの適切な実装例
-
-## 🚫 避けるべき事項
-
-- 抽象的すぎる説明や概念的な提案（具体例や実装コードを常に含める）
-- 過度に長い文章や段落（3〜4文以内を目安に）
-- 技術的に古い（PHP 7.4以前、React Class Componentなど）パターンやアプローチ
-- 実装が複雑すぎるコードサンプル（核となる概念が理解しづらくならないように）
-- 断定的な表現（「〜すべき」「絶対に〜」など）より、「〜が効果的です」のような柔らかい表現を優先
-
-## 📝 出力形式の好み
-
-- **マークダウン形式での説明**：Zenn記法にも対応
-- **コードブロック**：言語指定と説明コメントを必ず含める
-- **視覚的構造化**：箇条書き、表、見出しレベルを適切に活用
-- **絵文字の活用**：セクションの区切りや重要ポイントの強調に活用
-- **段階的な説明**：基本→応用→発展という流れで概念を説明
-
-## 💡 特に重視するテクニック
-
-### ストーリーテリング
-問題提起→試行錯誤→解決→結果という物語形式で技術的な解説を行うことを心がけてください。読者が共感し、学びを得やすくなります。
-
-### 類推と比喩
-複雑な技術概念を日常的な事例や身近な例えを用いて説明してください。特にDDDやイベント駆動設計などの抽象的な概念の説明時に有効です。
-
-### ビフォーアフター手法
-リファクタリングやパターン適用の効果を「Before/After」の形式で示してください。改善点を明確にし、コード品質の向上を視覚的に理解できるようにします。
-
-## 📈 その他の注意点
-
-- 常に最新のベストプラクティス（PHP 8.2+, React 18+など）を反映
-- パフォーマンス、セキュリティ、メンテナンス性をバランスよく考慮
-- 実際の業務経験に基づく具体的なユースケースを示す
-- 異なるアプローチの長所・短所を比較し、適切な選択肢を提供
-- 技術選択における判断基準やトレードオフを明示
-
----
-
-このカスタムインストラクションを参考に、私の技術記事執筆とコーディングをサポートしてください。質問がある場合は、具体的に尋ねて理解を深めていただけると助かります！
+By following these instructions, you'll help create a valuable resource for developing and refining Agentic Coding techniques.
