@@ -1,74 +1,27 @@
-# .clinerules
-# Agentic Coding Sandbox プロジェクトのコードスタイル設定
+## Git Workflow
 
-# 基本設定
-indent_style = space
-indent_size = 2
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-max_line_length = 100
+- Commit in appropriate work units with descriptive messages
+- NEVER commit directly to the main branch - always use feature branches
+- Follow conventional commit format
 
-# JavaScript/TypeScript 設定
-[*.{js,jsx,ts,tsx}]
-quote_type = single
-curly_bracket_next_line = false
-spaces_around_operators = true
-spaces_around_brackets = false
-# 命名規則
-function_naming_convention = camelCase
-class_naming_convention = PascalCase
-constant_naming_convention = UPPER_SNAKE_CASE
-variable_naming_convention = camelCase
-# コード品質
-prefer_const = true
-no_var = true
-use_strict_equality = true
-use_template_literals = true
-use_destructuring = true
-use_async_await = true
-specify_return_types = true
+## Documentation Maintenance
 
-# Python 設定
-[*.py]
-indent_size = 4
-# PEP 8 準拠
-follow_pep8 = true
-use_type_hints = true
-use_f_strings = true
-use_comprehensions = true
-meaningful_variable_names = true
-max_line_length = 88
+- Update CLAUDE.md continuously without being asked
+- Add new rules and procedures when clarified
+- Accumulate project-specific knowledge and best practices
+- Record frequently used commands and shortcuts
+- Update when code conventions change or new tools are introduced
 
-# Markdown 設定
-[*.md]
-trim_trailing_whitespace = false
+## Code Style Guidelines
+- **Formatting**: Use consistent indentation (2 spaces recommended)
+- **Naming**: Use descriptive names in camelCase for variables/functions, PascalCase for classes
+- **Imports**: Group imports by type (standard library first, then third-party, then local)
+- **Types**: Use strong typing where applicable
+- **Error Handling**: Use try/catch blocks and handle errors explicitly
+- **Comments**: Write clear comments for complex logic, avoid unnecessary comments
+- **Functions**: Keep functions small and focused on a single task
+- **Line Length**: Aim for 80-100 characters per line
 
-# JSON 設定
-[*.json]
-indent_size = 2
-
-# YAML 設定
-[*.{yml,yaml}]
-indent_size = 2
-
-# HTML/CSS 設定
-[*.{html,css,scss,sass}]
-indent_size = 2
-quote_type = double
-
-# ファイル構成ルール
-group_related_functions = true
-order_methods_logically = true
-single_responsibility_focus = true
-
-# コメントルール
-comment_complex_logic_only = true
-use_jsdoc = true
-keep_comments_updated = true
-
-# インポートルール
-group_imports_by_type = true
-sort_imports_alphabetically = true
-use_destructuring_for_multiple_imports = true
+## Project Organization
+- Group files by feature/module rather than by file type
+- Place tests alongside implementation files or in parallel test directory
