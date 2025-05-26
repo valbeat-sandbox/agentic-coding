@@ -44,12 +44,10 @@ When generating code for this project, please follow these guidelines:
 
 When suggesting new files or modifications, be aware of the project structure:
 
-- `/examples`: Contains example implementations and use cases
-- `/experiments`: Stores results and analysis of different approaches
-- `/rules`: Houses guidelines and constraints for LLM behavior
-- `/templates`: Provides reusable code and documentation templates
-- `/workflows`: Defines step-by-step processes for common development activities
-- `/.github/prompts`: Contains effective prompts for various coding tasks
+- `.clinerules`: Code style settings for the cline tool
+- `.github/`: GitHub configuration files, including Copilot instructions and prompts
+  - `/.github/prompts`: Contains effective prompts for various coding tasks
+- `CLAUDE.md`: Guidelines and best practices for working with Claude
 
 ## Task-Specific Guidance
 
@@ -58,18 +56,6 @@ When suggesting new files or modifications, be aware of the project structure:
 - Include clear purpose, target audience, and expected output format
 - Provide specific examples and constraints
 - Consider different skill levels and use cases
-
-### Defining Rules
-- Make rules specific and actionable
-- Include rationale for each rule
-- Provide examples of following and violating the rule
-- Consider how rules interact with different coding contexts
-
-### Designing Workflows
-- Break workflows into clear, sequential steps
-- Include decision points and alternative paths
-- Specify inputs and outputs for each step
-- Consider error handling and edge cases
 
 ## Collaboration Focus
 
